@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src\\index.js",
-    "sass": "node-sass -w src\\resources\\scss\\app.scss -o src\\public\\css\\app.css ",
+    "sass": "node-sass -w src\\resources\\scss\\ -o src\\public\\style\\",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/ngodinhtri/blog_nodejs#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5"
   },
   "devDependencies": {
     "express-handlebars": "^5.3.3",

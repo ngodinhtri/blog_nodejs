@@ -3,10 +3,10 @@ const router = express.Router()
 const siteController = require('../app/controllers/SiteController')
 
 
-router.use('/search', siteController.search)
-router.use('/:slug', (req, res) => {
-    res.send('Trang khong ton tai')
+router.get('/search', siteController.search)
+router.get('/:slug', (req, res) => {
+    res.render('404')
 })
-router.use('/', siteController.index)
+router.get('/', siteController.index)
 
 module.exports = router

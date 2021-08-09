@@ -12,6 +12,10 @@ app.use(express.urlencoded({
 }))
 app.use(express.json())
 
+//DB
+const db = require('./config/db/index')
+db.connect()
+
 //HTTP logger
 app.use(morgan('tiny'))
 
@@ -20,11 +24,11 @@ app.engine('hbs', exphbs({
   extname: 'hbs'
 }));
 app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, 'resources\\views'))
+app.set('views', path.join(__dirname, 'resources', 'views'))
 
 //Routing
 route(app)
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 });

@@ -1,0 +1,6 @@
+.card-text {
+  display: inline-block;
+  overflow: hidden;
+  word-wrap: break-word;
+  max-height: 3.6em;
+  line-height: 1.8em; }
